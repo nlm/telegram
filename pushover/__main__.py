@@ -50,7 +50,6 @@ def main():
                               "in the documentation and code examples)"))
 
     push_p.add_argument('-m', '--message',
-                        required=True,
                         help="your message")
 
     push_p.add_argument('-d', '--device',
@@ -111,8 +110,13 @@ def main():
 
     args = parser.parse_args()
 
+    requests.packages.urllib3.disable_warnings()
+
     if args.pushover_app_token is None:
         parser.error('PUSHOVER_APP_TOKEN is required')
+
+    if args.message is None:
+        args.message = sys.stdin.read()
 
     result = args.func(args)
 

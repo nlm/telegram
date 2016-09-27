@@ -90,7 +90,8 @@ class Pushover(object):
                 data['callback'] = str(callback)
 
         result = requests.post(self.api_url + '/1/messages.json', data=data)
-        return PushoverResult(result.status_code, result.text, params=data)
+        return PushoverResult(result.status_code, result.text,
+                              result.json, params=data)
 
     def get_receipt(self, receipt_id):
 
