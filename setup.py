@@ -2,7 +2,7 @@ from setuptools import setup,find_packages
 
 setup(
     name = "pushover",
-    version = "0.1",
+    version = "0.2",
     packages = ['pushover'],
     author = "Nicolas Limage",
     author_email = 'github@xephon.org',
