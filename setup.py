@@ -1,15 +1,15 @@
 from setuptools import setup,find_packages
 
 setup(
-    name = "pushover",
-    version = "0.2",
-    packages = ['pushover'],
+    name = "telegram",
+    version = "0.1",
+    packages = find_packages(),
     author = "Nicolas Limage",
     author_email = 'github@xephon.org',
-    description = "simple pushover lib and cli",
-    url = "https://github.com/nlm/pushover",
+    description = "simple telegram lib and cli",
+    url = "https://github.com/nlm/telegram",
     license = "GPL",
-    keywords = "pushover",
+    keywords = "telegram",
     classifiers = [
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -22,7 +22,7 @@ setup(
     ],
     entry_points = {
         'console_scripts': [
-            'pushover = pushover.__main__:main',
+            'telegram = telegram.__main__:main',
         ],
     },
 )
